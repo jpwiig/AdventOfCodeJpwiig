@@ -11,9 +11,16 @@ public class main {
     FileReader f = new FileReader("src/December1/data/Data.txt");
         BufferedReader reader = new BufferedReader(f);
     List<Elves> leElfes = new ArrayList<>();
-    while (reader.readLine() != null){
-        leElfes.add(new Elves(Integer.parseInt(reader.readLine())));
-    }
+    List<Integer>dats = new ArrayList<>();
 
+    String line  = reader.readLine();
+    char [] w = line.toCharArray();
+
+    while (line != null){
+        dats.add(Integer.parseInt();
+    }
+        leElfes.add(new Elves(dats));
+    days day = new days(leElfes);
+        System.out.println(day.findmostcal());
     }
 }

@@ -7,11 +7,22 @@ import java.util.List;
 public class days {
     List<Elves>theElves;
     int numberOfelves  = 0;
-    public days(int numberOfelves){
-        this.numberOfelves = numberOfelves;
-        theElves  = new ArrayList<>(this.numberOfelves);
+
+    public days(List<Elves> theElves) {
+        this.theElves = theElves;
     }
-    public void adddays(){
-    for (Elves e: theElves) theElves.add(e);
+
+    public int findmostcal(){
+        int [] allThetotal = new int[theElves.size()];
+
+        for (Elves e :theElves) {
+            int counter = 0;
+            allThetotal [counter] = e.calculateCals();
+        }
+        int max = 0;
+        for (int i = 0; i < allThetotal.length; i++){
+            if (allThetotal [i] < max) max = allThetotal[i];
+        }
+        return max;
     }
 }

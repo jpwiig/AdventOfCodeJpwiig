@@ -21,7 +21,7 @@ public class days {
         }
         int max = 0;
         for (int i = 0; i < allThetotal.length; i++){
-            if (allThetotal [i] < max) max = allThetotal[i];
+            if (allThetotal [i] > max) max = allThetotal[i];
         }
         return max;
     }

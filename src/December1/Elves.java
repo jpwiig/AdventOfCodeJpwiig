@@ -12,25 +12,6 @@ public class Elves {
         this.incals = incals;
     }
 
-    
-    /*  public Elves(int caloriesEeachmeal) {
-        this.caloriesEeachmeal = caloriesEeachmeal;
-        addCals(caloriesEeachmeal);
-
-    }
-
-    public boolean addCals(int cals){
-        List<Integer> calories = new ArrayList<>();
-        if (cals == 0) throw new IllegalArgumentException("You need to eat something my guy");
-        else{
-            while (cals <= 0){
-                calories.add(cals);
-            }
-        }
-        return true;
-    }*/
-
-    //is it nessitary
    public int calculateCals() { //fix this bs
         int sum = 0;
         if (incals.size() == 0) throw new IndexOutOfBoundsException("He hasnt eaten anything yet");

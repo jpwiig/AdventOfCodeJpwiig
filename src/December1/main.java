@@ -16,19 +16,24 @@ public class main {
         String line = reader.readLine();
 
 
-       while (line != null) {
+            int index = line.length();
+            while (index != 0) {
+                dats.clear();
+                while (!line.isEmpty()) {
 
-               dats.clear();
-               while (!line.isEmpty()) {
+                    dats.add(Integer.parseInt(line));
+                    line = reader.readLine();
 
-                   dats.add(Integer.parseInt(line));
-                   line = reader.readLine();
 
-               }
-               line = reader.readLine();
-               leElfes.add(new Elves(dats));
 
-       }
+
+                }
+                line = reader.readLine();
+                leElfes.add(new Elves(dats));
+            index--;
+            }
+
+
        reader.close();
                days day = new days(leElfes);
         System.out.println(day.findmostcal());

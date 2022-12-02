@@ -14,10 +14,11 @@ public class days {
 
     public int findmostcal(){
         int [] allThetotal = new int[theElves.size()];
+        for (int i = 0; i < allThetotal.length; i++){
+          for (int j =0; j < theElves.size(); j++)
 
-        for (Elves e :theElves) {
-            int counter = 0;
-            allThetotal [counter] = e.calculateCals();
+                allThetotal[j] = theElves.get(i).calculateCals();
+
         }
         int max = 0;
         for (int i = 0; i < allThetotal.length; i++){

@@ -30,6 +30,7 @@ public class main {
                 }
                 line = reader.readLine();
                 leElfes.add(new Elves(dats));
+
             index--;
             }
 

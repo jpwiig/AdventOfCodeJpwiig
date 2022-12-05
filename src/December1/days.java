@@ -13,17 +13,16 @@ public class days {
     }
 
     public int findmostcal(){
-        int [] allThetotal = new int[theElves.size()];
-        for (int i = 0; i < allThetotal.length; i++){
-          for (int j =0; j < theElves.size(); j++)
 
-                allThetotal[j] = theElves.get(i).calculateCals();
-
-        }
-        int max = 0;
-        for (int i = 0; i < allThetotal.length; i++){
-            if (allThetotal [i] > max) max = allThetotal[i];
-        }
+                int max = 0;
+      //  for (int i = 0; i < theElves.size(); i++){
+        //    if (theElves.get(i).calculateCals() > max) max = theElves.get(i).calculateCals();
+      //  }
+        for (Elves e : theElves){
+            if (e.getTotalcals() > max) max = e.getTotalcals();
+       }
         return max;
     }
+
+
 }
